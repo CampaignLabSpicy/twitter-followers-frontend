@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.20.0",
     "standard": "^14.3.1"
   }
 }
