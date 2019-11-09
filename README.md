@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 Follow the instructions in [the backend repo](https://github.com/CampaignLabSpicy/twitter-followers-api) to run the app.
 If `Error: Request failed with status code 404` shows in red once you are logged in, you may need to add the line `"proxy": "http://localhost:8080",` to package.json. **REMOVE this line again before pushing up to the repo!**
 You may also need a fallback value of `API_URL` in constants.js, so that 
-`export const API_URL = process.env.REACT_APP_API_URL || 'localhost:8080'`
+`export const API_URL = process.env.REACT_APP_API_URL || 'localhost:3000'`
 
 ### `npm run build`
 
