@@ -14,10 +14,10 @@ You will also see any lint errors in the console.
 
 ### running in production
 Follow the instructions in [the backend repo](https://github.com/CampaignLabSpicy/twitter-followers-api) to run the app.
-If `Error: Request failed with status code 404` shows in red once you are logged in, you may need to add the line `"proxy": "http://127.0.0.1:3000",` to package.json. **REMOVE this line again before pushing up to the repo!**
+If `Error: Request failed with status code 404` shows in red once you are logged in, you may need to add the line `"proxy": "http://127.0.0.1:8080",` to package.json. **REMOVE this line again before pushing up to the repo!**
+If `Error: Request failed with status code 404` shows in red once you are logged in, you may also need a fallback value of `API_URL` in constants.js, so that 
+`export const API_URL = process.env.REACT_APP_API_URL || '127.0.0.1:3000'`
 NB localhost does not work instead of 127.0.0.1. Axios will choke on localhost because it doesn't contain enough dots :angry:
-You may also need a fallback value of `API_URL` in constants.js, so that 
-`export const API_URL = process.env.REACT_APP_API_URL || 'localhost:3000'`
 
 ### `npm run build`
 
