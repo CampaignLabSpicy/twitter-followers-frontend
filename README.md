@@ -12,8 +12,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+### setting environment vars
+You need to set `REACT_APP_API_URL`.
+
 ### running in production
 Follow the instructions in [the backend repo](https://github.com/CampaignLabSpicy/twitter-followers-api) to run the app.
+That README refers to setting up a .env file.
+You need to set up a second .env file for the frontend.
+Same thing - `cp .env.example .env` so that it contains `REACT_APP_API_URL= http://localhost:8080`.
+
 If `Error: Request failed with status code 404` shows in red once you are logged in, you may need to add the line `"proxy": "http://127.0.0.1:8080",` to package.json. **REMOVE this line again before pushing up to the repo!**
 
 If `Error: Request failed with status code 404` shows in red once you are logged in, you may also need a fallback value of `API_URL` in constants.js, so that 
