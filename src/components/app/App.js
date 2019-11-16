@@ -17,7 +17,7 @@ class App extends React.Component {
   async componentDidMount () {
     this.setState({ error: '' })
     try {
-      const userData = await fetchUserData()
+      const { userData, location } = await fetchUserData()
       this.setState({ userData })
     } catch (e) {
       this.setState({ error: e.message })
@@ -26,12 +26,12 @@ class App extends React.Component {
   }
 
   renderMain () {
-    const { loading, userData, error } = this.state
+    const { loading, userData, location, error } = this.state
     if (loading) {
       return <p>Loading...</p>
     }
     if (userData) {
-      return <Dashboard userData={userData} />
+      return <Dashboard userData={userData} location={location}  />
     }
 
     return (

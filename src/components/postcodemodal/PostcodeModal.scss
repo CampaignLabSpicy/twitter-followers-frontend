@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+@keyframes animatetop {
+  from {top: -190vh; width: 0vw; opacity: 0}
+  to {top: -99vh; width: 90vw;  opacity: 1}
+}
+
+.modal {
+  height : 90vh;
+  width: 90vw;
+  position: relative;
+  top: -99vh;
+  z-index: 10;
+  background-color: #b0d0a0b0;
+  margin: auto;
+  padding: 0;
+  width: 90vw;
+  box-shadow: 0 1rem 2rem 0 #00000030,0 1.5rem 3rem 0 #00000028;
+  border-radius : 6rem;
+  animation-name: animatetop;
+  animation-duration: 0.2s
+}
+
+.flex-centre-container {
+  flex-direction : column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  height : 100%;
+  width: 100%;
+  text-align : center;
+  color : #402000;
+  text-shadow: 0 0 5px #f0f0ff;
+  font-family: 'Courgette', cursive;
+  font-weight: 700;
+  font-size: 6.5vh;
+}
+
+.noshow {
+  visibility : hidden
+}
