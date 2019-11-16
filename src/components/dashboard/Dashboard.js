@@ -16,6 +16,7 @@ const Dashboard = ({ userData }) => {
     <div className='dashboard'>
       <h2>You are a <em>{userType}</em></h2>
       <img src={'/images/' + userType + '.jpg'} alt={userType} />
+      <p>You have {userData.total} followers, {percentage}% are Labour supporters.</p>
       <p>{message.trim()}</p>
       <Tweet tweetText={tweetText} tweetUrl={tweetUrl} actionText={tweetAction} />
       <Mailchimp userType={userType} />
