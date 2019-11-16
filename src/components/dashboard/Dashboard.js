@@ -15,6 +15,7 @@ const Dashboard = ({ userData }) => {
   return (
     <div className='dashboard'>
       <h2>You are a <em>{userType}</em></h2>
+      <p>You have {userData.total} followers, {percentage}% already hear from Labour on Twitter.</p>
       <img src={'/images/' + userType + '.jpg'} alt={userType} />
       <p>{message.trim()}</p>
       <Tweet tweetText={tweetText} tweetUrl={tweetUrl} actionText={tweetAction} />
