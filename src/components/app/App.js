@@ -18,7 +18,8 @@ class App extends React.Component {
     this.setState({ error: '' })
     try {
       const { userData, location } = await fetchUserData()
-      this.setState({ userData })
+  console.log('location from fetchUserData()', location);
+      this.setState({ userData, location })
     } catch (e) {
       this.setState({ error: e.message })
     }

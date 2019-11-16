@@ -5,6 +5,7 @@ import React from 'react'
 import Tweet from '../tweet/Tweet'
 import LocalInfo from '../localinfo/LocalInfo'
 import PostcodeModal from '../postcodemodal/PostcodeModal'
+import Follow from '../follow/Follow'
 import Mailchimp from '../mailchimp/Mailchimp'
 
 import { ACTIVIST_THRESHOLD } from '../../constants'
@@ -14,7 +15,7 @@ const Dashboard = ({ userData, location }) => {
   const percentage = Math.round(userData.matched / userData.total * 100)
   const userType = percentage > ACTIVIST_THRESHOLD ? 'Mobiliser' : 'Converter'
   const { message, tweetText, tweetAction, tweetUrl } = getCopy(userType)
-  console.log('l:',location);
+  // console.log('location:',location);
   return (
     <>
       <PostcodeModal location={location} />
@@ -25,6 +26,7 @@ const Dashboard = ({ userData, location }) => {
         <p>{message.trim()}</p>
         <LocalInfo location={location} />
         <Tweet tweetText={tweetText} tweetUrl={tweetUrl} actionText={tweetAction} />
+        <Follow handles={location.twitterHandles} defaultFollow={location.defaultTwitterFollow} constituency={location.parliamentary_constituency} />
         <Mailchimp userType={userType} />
       </div>
     </>
