@@ -19,18 +19,19 @@ class TwitterLogin extends React.Component {
   render () {
     return (
       <div className='twitter-login'>
-        <button className='button' type='button' onClick={() => TwitterLogin.onClickLogin()}>Login With Twitter to Know Your Followers</button>
-        <p className='twitter-login__smallprint'>
-          Know Your Followers doesn't store or share any data relating to your Twitter account, or post anything on Twitter.
-          <button type='button' className='twitter-login__why' onClick={() => this.onClickWhy()}>
-            So why do I need to login?
-          </button>
-        </p>
-        {this.state.showWhy ? (
+        <button className='twitter-login__button button' type='button' onClick={() => TwitterLogin.onClickLogin()}>
+          <span>Sign in with Twitter</span>
+          <img src='/images/Twitter.svg' alt='Twitter' />
+        </button>
+        <div className='twitter-login__smallprint'>
+          <p>
+            Know Your Followers doesn't store or share any data relating to your Twitter account, or post anything on Twitter.
+            So why do I need to sign in?
+          </p>
           <p className='twitter-login__reason'>
             Logging in with your account lets us access Twitter’s data directly through its API to analyse the people who follow you.
           </p>
-        ) : ''}
+        </div>
       </div>
     )
   }

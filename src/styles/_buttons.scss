@@ -5,10 +5,9 @@
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 300;
   padding: $spacing-md;
-  text-transform: uppercase;
 
   &:hover,&:focus {
     background-color: red;

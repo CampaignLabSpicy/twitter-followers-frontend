@@ -1,4 +1,4 @@
-$app-width: 600px;
+$app-width: 400px;
 $desktop-min-width: 600px;
 
 $spacing-lg: 1rem;
@@ -6,7 +6,10 @@ $spacing-md: 0.75rem;
 $spacing-sm: 0.5rem;
 $spacing-xs: 0.125rem;
 
-$light: #eee;
+$light: #faf8f3;
+$red: #e4003b;
 $dark: #444;
-$twitter-light: rgba(29, 161, 242, 0.8);
 $twitter-dark: rgb(29, 161, 242);
+$twitter-light: lighten($twitter-dark, 10);
+
+$title-font-size: 3rem;

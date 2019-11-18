@@ -32,20 +32,24 @@ Join me and thousands of others campaigning across the country for a Labour vict
 
 export const TWEET_URL_FOR_MOBILISERS = 'https://events.labour.org.uk/'
 
+export const EMOJI_FOR_MOBILISERS = 'https://events.labour.org.uk/'
+
 const getCopyObject = (userType) => {
   if (userType === 'Mobiliser') {
     return {
       message: MESSAGE_FOR_MOBILISERS,
       tweetAction: TWEET_ACTION_FOR_MOBILISERS,
       tweetText: TWEET_FOR_MOBILISERS,
-      tweetUrl: TWEET_URL_FOR_MOBILISERS
+      tweetUrl: TWEET_URL_FOR_MOBILISERS,
+      emoji: '💪🌹✋'
     }
   }
   return {
     message: MESSAGE_FOR_CONVERTERS,
     tweetAction: TWEET_ACTION_FOR_CONVERTERS,
     tweetText: TWEET_FOR_CONVERTERS,
-    tweetUrl: TWEET_URL_FOR_CONVERTERS
+    tweetUrl: TWEET_URL_FOR_CONVERTERS,
+    emoji: '🌹'
   }
 }
 

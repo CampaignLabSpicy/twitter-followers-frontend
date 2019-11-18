@@ -29,8 +29,11 @@ export default class Mailchimp extends React.Component {
           target='_blank' noValidate
         >
           <div id='mc_embed_signup_scroll'>
-            <h2>Subscribe to CampaignLab</h2>
-            <div className='indicates-required'><span className='asterisk'>*</span> indicates required</div>
+            <p>
+              Over the next month <em>KnowYourFollowers</em> will be getting more functions
+              to help you do more to help Labour win the General Election. Subscribe to <em>CampaignLab</em> for
+              updates and tailored content that is best suited for your followers.
+            </p>
             <div className='mc-field-group'>
               <label htmlFor='mce-EMAIL'>Email Address <span className='asterisk'>*</span>
               </label>

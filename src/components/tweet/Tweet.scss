@@ -7,20 +7,30 @@
 }
 
 .tweet__text {
-  border-color: $dark;
+  background: none;
+  border-color: $red;
   box-sizing: border-box;
-  height: 100px;
+  height: 145px;
   margin-bottom: $spacing-md;
   max-width: 400px;
-  padding: $spacing-sm;
+  padding: $spacing-lg;
   width: 100%;
 }
 
 .tweet__button {
-  background-color: $twitter-light;
+  background-color: $twitter-dark;
+  display: flex;
 
-  &:hover {
+  span {
+    margin-right: $spacing-sm;
+  }
+
+  img {
+    width: 32px;
+  }
+
+  &:hover,&:focus,&:active {
     color: white;
-    background-color: $twitter-dark;
+    background-color: $twitter-light;
   }
 }

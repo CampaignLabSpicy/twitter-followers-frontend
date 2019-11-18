@@ -1,7 +1,15 @@
 @import './variables';
 
 body {
-  font-family: sans-serif;
+  font-family: Oxygen, sans-serif;
+}
+
+h1 {
+  color: $red;
+}
+
+h1,h2 {
+  font-weight: 300;
 }
 
 p {
@@ -9,11 +17,15 @@ p {
 }
 
 a {
-  color: $dark;
-  font-weight: bold;
+  color: $red;
   text-decoration: none;
 
   &:hover {
-    color: black;
+    color: darken($red, 10);
   }
+}
+
+em {
+  color: $red;
+  font-style: normal;
 }

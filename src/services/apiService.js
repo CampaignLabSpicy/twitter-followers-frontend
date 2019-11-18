@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { API_URL } from '../constants'
+import { ACTIVIST_THRESHOLD, API_URL } from '../constants'
 
 export const fetchUserData = async () => {
   let data = null
@@ -22,5 +22,7 @@ export const fetchUserData = async () => {
   if (data.errors) {
     throw new Error(data.errors.map(e => e.message).join(', '))
   }
-  return data
+  const percentage = Math.round(data.matched / data.total * 100)
+  const userType = percentage > ACTIVIST_THRESHOLD ? 'Mobiliser' : 'Converter'
+  return { percentage, userType, ...data }
 }
