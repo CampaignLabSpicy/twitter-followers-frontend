@@ -3,7 +3,6 @@
 .app {
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
   padding: $spacing-lg;
 
   @media (min-width: $desktop-min-width) {
@@ -14,7 +13,7 @@
 .app__title {
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex: 1 0 auto;
   max-width: $app-width;
 
   h1 {
@@ -32,19 +31,19 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    flex: 1 0 0;
-    flex-direction: column;
+    flex: 0 1 $app-width;
     margin: auto $spacing-lg auto auto;
   }
 }
 
 .app__content {
+  flex: 1 0 auto;
   margin: auto;
   max-width: $app-width;
   padding: $spacing-lg;
 
   @media (min-width: $desktop-min-width) {
-    flex: 1 0 0;
+    flex: 0 1 $app-width;
     margin: auto auto auto $spacing-lg;
     min-width: 0;
   }

@@ -1,9 +1,11 @@
 @import '../../styles/variables';
 
 .twitter-login__button {
+    align-items: center;
     background-color: $twitter-dark;
     display: flex;
     margin: $spacing-lg auto;
+    text-align: left;
 
     &:hover,&:active,&:focus {
         background-color: $twitter-light;
@@ -14,6 +16,7 @@
     }
 
     img {
+        height: 26px;
         width: 32px;
     }
 }
