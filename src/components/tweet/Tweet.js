@@ -19,10 +19,11 @@ export default class Tweet extends React.Component {
         <p>{this.props.actionText}</p>
         <textarea className='tweet__text' onChange={(e) => this.onChangeTweet(e)} value={this.state.tweetText} />
         <a
-          className='button tweet__button twitter-share-button'
+          className='button tweet__button'
           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(this.state.tweetText)}`}
         >
-          Spread the Word
+          <span>Spread the Word</span>
+          <img src='/images/Twitter.svg' alt='Twitter' />
         </a>
       </div>
     )

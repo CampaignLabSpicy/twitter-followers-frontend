@@ -4,6 +4,10 @@ html {
   background-color: $light;
 }
 
+html,body,#root,.app {
+  height: 100%;
+}
+
 div {
   box-sizing: border-box;
   display: flex;

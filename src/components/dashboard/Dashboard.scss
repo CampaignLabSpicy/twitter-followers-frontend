@@ -1,12 +1,13 @@
 @import '../../styles/variables';
 
 .dashboard {
-  .button {
-    margin-right: auto;
-  }
+  align-items: center;
 
-  img {
-    margin-bottom: $spacing-md;
-    width: 100%;
+  .button {
+    margin: auto;
   }
+}
+
+.dashboard__emoji {
+  font-size: $title-font-size;
 }

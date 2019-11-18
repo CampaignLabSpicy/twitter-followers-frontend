@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .app {
+  align-items: center;
   flex-direction: column;
   max-width: 100%;
   padding: $spacing-lg;
@@ -11,31 +12,44 @@
 }
 
 .app__title {
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
+  max-width: $app-width;
 
   h1 {
-    margin: 0 $spacing-sm $spacing-sm 0;
+    font-size: $title-font-size;
+    text-align: center;
+  }
+
+  em {
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+
+  p {
+    font-size: $title-font-size;
   }
 
   @media (min-width: $desktop-min-width) {
+    flex: 1 0 0;
     flex-direction: column;
-
-    h1 {
-      margin-bottom: 0;
-      margin-right: $spacing-lg;
-    }
+    margin: auto $spacing-lg auto auto;
   }
 }
 
 .app__content {
-  background-color: white;
   margin: auto;
-  padding: $spacing-lg;
   max-width: $app-width;
-  width: 100%;
+  padding: $spacing-lg;
+
+  @media (min-width: $desktop-min-width) {
+    flex: 1 0 0;
+    margin: auto auto auto $spacing-lg;
+    min-width: 0;
+  }
 }
 
 .app__main {
-  padding-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
 }

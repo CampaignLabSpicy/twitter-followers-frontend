@@ -1,33 +1,24 @@
 @import '../../styles/variables';
 
-.twitter-login {
-    .button {
-        margin-bottom: $spacing-sm;
+.twitter-login__button {
+    background-color: $twitter-dark;
+    display: flex;
+    margin: $spacing-lg auto;
+
+    &:hover,&:active,&:focus {
+        background-color: $twitter-light;
+    }
+
+    span {
+        margin-right: $spacing-sm;
+    }
+
+    img {
+        width: 32px;
     }
 }
 
 .twitter-login__smallprint {
-    color: $dark;
-    margin-bottom: $spacing-xs;
-    font-size: 0.8rem;
-}
-
-.twitter-login__why {
-    background: none;
-    border: none;
-    color: $dark;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 0;
-    margin-left: $spacing-xs;
-
-    &:hover {
-        color: black;
-    }
-}
-
-.twitter-login__reason {
-    color: $dark;
+    margin: $spacing-md 0 0 0;
     font-size: 0.8rem;
 }
