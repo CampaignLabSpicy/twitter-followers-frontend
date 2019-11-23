@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <p>
-        Developed by <a href='https://campaignlab.london'>CampaignLab</a>
+        Developed by <a href='https://www.campaignlab.london'>CampaignLab</a>
       </p>
     </div>
   )
