@@ -6,6 +6,7 @@ import Tweet from '../tweet/Tweet'
 import Mailchimp from '../mailchimp/Mailchimp'
 
 import getCopy from '../../copy'
+import PostcodeModal from '../postcode-modal/PostcodeModal'
 
 const Dashboard = ({ userData }) => {
   const { userType, percentage } = userData
@@ -19,7 +20,7 @@ const Dashboard = ({ userData }) => {
       </p>
       <p>{message.trim()}</p>
       <Tweet tweetText={tweetText} tweetUrl={tweetUrl} actionText={tweetAction} />
-      <Mailchimp userType={userType} />
+      <PostcodeModal />
     </div>
   )
 }
