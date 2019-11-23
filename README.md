@@ -36,3 +36,8 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Troubleshooting for running locally
+
+* Don't forget to visit the api server in your browser, you might need to try 127.0.0.1 and/or localhost
+* If you are having trouble running locally you might need to replace line 1 in src/constants.js with `export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000'` or `export const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:3000'` try both and see which one works
