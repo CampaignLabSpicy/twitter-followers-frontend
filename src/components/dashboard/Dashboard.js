@@ -19,7 +19,6 @@ const Dashboard = ({ userData }) => {
       </p>
       <p>{message.trim()}</p>
       <Tweet tweetText={tweetText} tweetUrl={tweetUrl} actionText={tweetAction} />
-      <Mailchimp userType={userType} />
     </div>
   )
 }
