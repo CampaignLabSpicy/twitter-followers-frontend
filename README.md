@@ -25,7 +25,7 @@ If `Error: Request failed with status code 404` shows in red once you are logged
 
 If `Error: Request failed with status code 404` shows in red once you are logged in, you may also need a fallback value of `API_URL` in constants.js, so that 
 `export const API_URL = process.env.REACT_APP_API_URL || '127.0.0.1:3000'`
-NB localhost does not work instead of 127.0.0.1. Axios will choke on localhost because it doesn't contain enough dots :angry:
+NB localhost does not work instead of 127.0.0.1. Axios will choke on localhost because it doesn't contain enough dots :angry: (some people have found localhost works though, try it if you are stuck)
 
 ### `npm run build`
 
@@ -40,4 +40,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Troubleshooting for running locally
 
 * Don't forget to visit the api server in your browser, you might need to try 127.0.0.1 and/or localhost
-* If you are having trouble running locally you might need to replace line 1 in src/constants.js with `export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000'` or `export const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:3000'` try both and see which one works
