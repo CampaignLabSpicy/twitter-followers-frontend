@@ -49,7 +49,7 @@ const getCopyObject = (userType) => {
     tweetAction: TWEET_ACTION_FOR_CONVERTERS,
     tweetText: TWEET_FOR_CONVERTERS,
     tweetUrl: TWEET_URL_FOR_CONVERTERS,
-    emoji: '🌹'
+    emoji: '🤝🌹'
   }
 }
 
