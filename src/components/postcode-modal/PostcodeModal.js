@@ -1,31 +1,36 @@
 import "./PostcodeModal.scss";
 
-import React, { useState } from "react";
+import React from "react";
 
 import { fetchPostcodeData } from "../../services/apiService";
 
-const PostcodeModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
-  const [postcode, setPostcode] = useState("");
-  const [error, setError] = useState("");
-  const [data, setData] = useState(undefined);
+const PostcodeModal = (props) => {
+  const { location={}, setPostcode, setError, error } = props;
+  const { pc, pc7, pc8, pcd, pcs } = location;
+  let isOpen = !location.specificity || location.specificity < 6     // 6 is either constituency or postcode sector.
+  let postcodeValue = pc7 || pc8 || pc || pcd || pcs ;
 
   const onClick = e => {
     if (e.currentTarget === e.target) {
-      setIsOpen(false);
+      isOpen= false;
     }
   };
-  const onSubmit = async e => {
-    e.preventDefault();
 
+  const onSubmit = async ev => {
+    ev.preventDefault();
     try {
-      const data = await fetchPostcodeData(postcode);
+      const { location } = await fetchPostcodeData(ev.target.value);
+      setPostcode ( postcodeValue );
     } catch (error) {
       setError(error.message);
     }
   };
 
-  console.log(data);
+  const setPostcodeValue = pc => {
+    // is a required prop
+  };
+
+  console.log(location);
 
   return (
     <div
@@ -42,8 +47,8 @@ const PostcodeModal = () => {
             {error && <p>{error}</p>}
             <input
               type="text"
-              value={postcode}
-              onChange={e => setPostcode(e.target.value)}
+              value={ location.pc || '' }
+              onChange={ ev=> setPostcodeValue(ev.target.value) }
             />
             <button type="submit">Go</button>
           </fieldset>

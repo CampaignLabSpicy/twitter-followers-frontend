@@ -6,7 +6,7 @@ import TwitterLogin from '../twitter-login/TwitterLogin'
 import Dashboard from '../dashboard/Dashboard'
 import Footer from '../footer/Footer'
 
-import { fetchUserData } from '../../services/apiService'
+import { fetchUserData, fetchPostcodeData } from '../../services/apiService'
 import getCopy from '../../copy'
 
 class App extends React.Component {
@@ -17,6 +17,8 @@ class App extends React.Component {
 
   async componentDidMount () {
     this.setState({ error: '' })
+    this.setState({ pc: null })
+
     try {
       const userData = await fetchUserData()
       this.setState({ userData })
@@ -24,6 +26,23 @@ class App extends React.Component {
       this.setState({ error: e.message })
     }
     this.setState({ loading: false })
+  }
+
+  updatePostcode = async pc => {
+    this.setState({ loading: true });
+    try {
+      const newLocation = await fetchPostcodeData (pc);
+      console.log(`from ${pc} received`,newLocation);
+      if (newLocation & newLocation.specificity >= this.state.location.specificity)
+        this.setState({ location : newLocation });
+    } catch (e) {
+      this.setState({ error: e.message });
+    }
+    this.setState({ loading: false });
+  }
+
+  async setError (e) {
+    this.setState({ error: e.message });
   }
 
   renderTitle () {
@@ -52,12 +71,17 @@ class App extends React.Component {
   }
 
   renderMain () {
-    const { loading, userData, error } = this.state
+    const { loading, userData, location, error } = this.state
     if (loading) {
       return <p>Loading...</p>
     }
     if (userData) {
-      return <Dashboard userData={userData} />
+      return <Dashboard
+        location={ location }
+        setPostcode={ this.updatePostcode }
+        setError={ this.setError }
+        userData={ userData }
+        />
     }
 
     return (
