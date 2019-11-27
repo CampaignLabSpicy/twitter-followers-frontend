@@ -19,11 +19,11 @@ Get started right now by tweeting a message that will get your followers involve
 `
 
 export const TWEET_FOR_CONVERTERS = `
-Labour will scrap Universal Credit and create a system that works to end poverty. 
-The Tories’ cruel benefits system has caused hardship for too long. With us? Add your name 👇
+Labour is asking big businesses and the top 5% to pay a little more tax for our public services but is freezing income tax, VAT & NI for the 95%. 
+Find out if you're one of the majority of working people who will face no increase under Labour! 👇
 `
 
-export const TWEET_URL_FOR_CONVERTERS = 'https://action.labour.org.uk/page/s/scrap-universal-credit'
+export const TWEET_URL_FOR_CONVERTERS = 'https://action.labour.org.uk/page/content/fair-tax-calculator'
 
 export const TWEET_FOR_MOBILISERS = `
 If we work together, we can get a Labour Government that puts people before privilege.
