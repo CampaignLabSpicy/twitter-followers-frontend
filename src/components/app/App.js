@@ -67,7 +67,7 @@ class App extends React.Component {
         <p>
           Know Your Followers analyses the people who follow you on Twitter and works out the best way that your tweets
           can build support for Labour and win the election. Find out what kind of digital activist you are, and become
-          a part of the Labour 2019 Twitter campaign. This tool is designed for activists so will not work if you have more than 10000 followers.
+          a part of the Labour 2019 Twitter campaign.
         </p>
         <TwitterLogin />
       </div>
