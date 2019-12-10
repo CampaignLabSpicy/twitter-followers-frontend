@@ -30,6 +30,7 @@ class TwitterLogin extends React.Component {
           </p>
           <p className='twitter-login__reason'>
             Logging in with your account lets us access Twitter’s data directly through its API to analyse the people who follow you.
+            The tool is designed for activists, so will not work if you have more than 10,000 followers.
           </p>
         </div>
       </div>
